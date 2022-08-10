@@ -36,3 +36,17 @@
   body { 
     font-family: "Inter", sans-serif;
         }
+
+    h1{
+        font-size: 23px;
+    }
+    label.TOS,form>div.form-group>input.form-control{
+        font-weight: 300;
+    }
+    label.TOS,.logIn,.copyRight{
+        font-size: 12px;
+    }
+    .btn-cus{
+        background-color: var(--main);
+    }
+    .logIn,.copyRight{text-align: center;}
