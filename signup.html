@@ -59,7 +59,7 @@
 
 
 
-
+this is the hand written branch
 
 
 
@@ -67,46 +67,6 @@
 <script src="dist/js/jquery.min.js"></script>
 <script src="dist/js/popper.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
-<script src="dist/js/jquery.validate.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#signupForm').validate({
-            rules:{
-                fullName:{
-                    required: true,
-                    minlength: 2
-                },
-                email:{
-                    required: true,
-                    email:true
-                },
-                phoneNum:{
-                    required: true,
-                    minlength:2
-                },
-                password:{
-                    required: true,
-                    minlength:5
-                },
-                password2:{
-                    required: true,
-                    minlength:5,
-                    equalTo:'#password'
-                },
-                TOS:{
-                    required:true
-                }
-            },
-                messages: {
-                    fullName: 'Hãy điền họ tên',
-                    email:'Hãy điền đúng Email',
-                    phoneNum:'Hãy điền đúng số điện thoại',
-                    password: 'Hãy điền mật khẩu hợp lệ',
-                    password2: 'Nhập lại mật khẩu giống với mật khẩu trên',
-                    TOS: 'Bắt buộc phải đồng ý với Điểu Khoản'
-                }
-        });
-    })
-</script>
+
 </body>
 </html>
