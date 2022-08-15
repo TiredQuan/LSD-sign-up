@@ -22,32 +22,36 @@
     <h1 class="mt-5 mb-5">
         Sign up to LSD .'s MS
     </h1>
-    <form action="" class="form-group" id="signupForm">
-        <!-- TRY TO MAKE THE FORM VALIDATE, WHETHER IT IS BY BOOTSTRAP OR PURE JS -->
+    <form action="" class="form-group" id="signupForm" novalidate>
         <div class="form-group">
             <label for="fullName">Họ tên đầy đủ</label>
             <input type="text" class="form-control" id="fullName" name="fullName">
+            <label id="fullName-error" class="error" for="fullName">Hãy điền họ tên</label>
         </div>
         
         <div class="form-group">
             <label for="email">Địa chỉ Email</label>
             <input type="email" class="form-control" id="email" name="email">
-            <p></p>
+            <label id="email-error" class="error" for="email">Hãy điền đúng Email</label>
         </div>
         <div class="form-group">
             <label for="phoneNum">Số điện thoại</label>
             <input type="text" class="form-control" id="phoneNum" name="phoneNum">
+            <label id="phoneNum-error" class="error" for="phoneNum">Hãy điền đúng số điện thoại</label>
         </div>
         <div class="form-group">
             <label for="password">Mật khẩu</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="+6 kí tự">
+            <label id="password-error" class="error" for="password">Hãy điền mật khẩu hợp lệ</label>
         </div>
         <div class="form-group">
             <label for="password2">Nhập lại mật khẩu</label>
             <input type="password" class="form-control" id="password2" name="password2" >
+            <label id="password2-error" class="error" for="password2">Nhập lại mật khẩu giống với mật khẩu trên</label>
         </div>
         <div class="form-group form-check">
             <input type="checkbox" name="TOS" id="TOS" class="form-check-input">
+            <label id="TOS-error" class="error" for="TOS">Bắt buộc phải đồng ý với Điểu Khoản</label>
             <label for="TOS" class="form-check-label TOS">Tạo một tài khoản có nghĩa là bạn đã đồng ý với <a href="">Điều khoản dịch vụ</a>, <a href="">Chính sách bảo mật</a>, và <a href="">Cài đặt thông báo</a> của chúng tôi.</label>
         </div>
         <input type="submit" class="btn text-light btn-cus w-50" value="Đăng ký">
@@ -59,7 +63,6 @@
 
 
 
-this is the hand written branch
 
 
 
@@ -67,6 +70,6 @@ this is the hand written branch
 <script src="dist/js/jquery.min.js"></script>
 <script src="dist/js/popper.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
-
+<script src="dist/js/script.min.js"></script>
 </body>
 </html>
