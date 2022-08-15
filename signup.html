@@ -22,35 +22,35 @@
     <h1 class="mt-5 mb-5">
         Sign up to LSD .'s MS
     </h1>
-    <form action="" class="form-group" novalidate>
+    <form action="" class="form-group" id="signupForm">
         <!-- TRY TO MAKE THE FORM VALIDATE, WHETHER IT IS BY BOOTSTRAP OR PURE JS -->
         <div class="form-group">
             <label for="fullName">Họ tên đầy đủ</label>
-            <input type="text" class="form-control" id="fullName">
+            <input type="text" class="form-control" id="fullName" name="fullName">
         </div>
         
         <div class="form-group">
             <label for="email">Địa chỉ Email</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" id="email" name="email">
+            <p></p>
         </div>
         <div class="form-group">
             <label for="phoneNum">Số điện thoại</label>
-            <input type="text" class="form-control" id="phoneNum">
+            <input type="text" class="form-control" id="phoneNum" name="phoneNum">
         </div>
         <div class="form-group">
             <label for="password">Mật khẩu</label>
-            <input type="password" class="form-control" id="password" placeholder="+6 kí tự">
+            <input type="password" class="form-control" id="password" name="password" placeholder="+6 kí tự">
         </div>
         <div class="form-group">
             <label for="password2">Nhập lại mật khẩu</label>
-            <input type="password" class="form-control" id="password2" >
+            <input type="password" class="form-control" id="password2" name="password2" >
         </div>
         <div class="form-group form-check">
-            <input type="checkbox" name="" id="TOS" class="form-check-input">
-            <label for="TOS" class="form-check-label TOS">Creating an account means you’re okay with our <a href="">Terms of Service</a>, <a href="">Privacy Policy</a>, and our default <a href="">Notification Settings</a>.</label>
+            <input type="checkbox" name="TOS" id="TOS" class="form-check-input">
+            <label for="TOS" class="form-check-label TOS">Tạo một tài khoản có nghĩa là bạn đã đồng ý với <a href="">Điều khoản dịch vụ</a>, <a href="">Chính sách bảo mật</a>, và <a href="">Cài đặt thông báo</a> của chúng tôi.</label>
         </div>
-        <button type="submit" class="btn text-light btn-cus w-50">Đăng ký</button>
-        
+        <input type="submit" class="btn text-light btn-cus w-50" value="Đăng ký">
     </form>
     <p class="logIn">Có tài khoản rổi? <a href="">Hãy đăng nhập luôn!</a></p>
     <p class="copyRight">Copyright&#64;2022-2023</p>
@@ -67,6 +67,46 @@
 <script src="dist/js/jquery.min.js"></script>
 <script src="dist/js/popper.min.js"></script>
 <script src="dist/js/bootstrap.min.js"></script>
-<script src="" async defer></script>
+<script src="dist/js/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#signupForm').validate({
+            rules:{
+                fullName:{
+                    required: true,
+                    minlength: 2
+                },
+                email:{
+                    required: true,
+                    email:true
+                },
+                phoneNum:{
+                    required: true,
+                    minlength:2
+                },
+                password:{
+                    required: true,
+                    minlength:5
+                },
+                password2:{
+                    required: true,
+                    minlength:5,
+                    equalTo:'#password'
+                },
+                TOS:{
+                    required:true
+                }
+            },
+                messages: {
+                    fullName: 'Hãy điền họ tên',
+                    email:'Hãy điền đúng Email',
+                    phoneNum:'Hãy điền đúng số điện thoại',
+                    password: 'Hãy điền mật khẩu hợp lệ',
+                    password2: 'Nhập lại mật khẩu giống với mật khẩu trên',
+                    TOS: 'Bắt buộc phải đồng ý với Điểu Khoản'
+                }
+        });
+    })
+</script>
 </body>
 </html>
