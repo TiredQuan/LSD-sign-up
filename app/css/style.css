@@ -50,6 +50,10 @@
         color: #ff0001;
         margin: 0;
         position: absolute;
+        display:none;
+    }
+    .error-show{
+        display: block !important;
     }
     label#TOS-error{
         position: static;
